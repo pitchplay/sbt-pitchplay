@@ -2,6 +2,9 @@ sbt-pitchplay
 =============
 
 [![Travis](https://img.shields.io/travis/pitchplay/sbt-pitchplay.svg?style=flat-square)](https://travis-ci.org/pitchplay/sbt-pitchplay)
+[![Codacy](https://img.shields.io/codacy/4e20f68b914641798bc8adb76c2ec6de.svg?style=flat-square)](https://www.codacy.com/app/pitchplay/sbt-pitchplay)
+[![VersionEye](https://img.shields.io/versioneye/d/user/projects/55749c0e33633400230000a7.svg?style=flat-square)](https://www.versioneye.com/user/projects/55749c0e33633400230000a7)
+[![Maven Central](https://img.shields.io/maven-central/v/io.pitchplay/sbt-pitchplay.svg?style=flat-square)]()
 
 Common settings, plugins and configurations used in PitchPlay development.
 
