@@ -1,0 +1,16 @@
+sbt-pitchplay
+Copyright 2015 PitchPlay Inc
+
+This product includes software developed at
+PitchPlay Inc (https://pitchplay.io).
+
+
+The product includes the following components which provided under the 
+corresponding licenses. See project link for further details.
+
+    (Apache-2.0 License) sbt-release - https://github.com/sbt/sbt-release
+    (Apache-2.0 License) sbt-scalastyle - https://github.com/scalastyle/scalastyle-sbt-plugin
+    (Apache-2.0 License) sbt-scoverage - https://github.com/scoverage/sbt-scoverage
+    (BSD 2-Clause License) sbt-native-packager - https://github.com/sbt/sbt-native-packager
+    (MIT License) sbt-buildinfo - https://github.com/sbt/sbt-buildinfo
+
