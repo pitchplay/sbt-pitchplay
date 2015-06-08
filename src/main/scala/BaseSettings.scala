@@ -13,6 +13,7 @@ object BaseSettings extends AutoPlugin {
 
   override def projectSettings = Seq(
     organization := "io.pitchplay",
+    scalaVersion := "2.11.6",
     scalacOptions ++= Seq(
       "-deprecation",         // Warn on deprecated API's
       "-feature",             // Explicit feature checking
