@@ -1,0 +1,3 @@
+> docker:stage
+$ exists target/docker/stage/Dockerfile
+# grep for java 8
