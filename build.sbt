@@ -7,6 +7,7 @@ sbtPlugin := true
 
 organization := "io.pitchplay"
 name := "sbt-pitchplay"
+licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
 scalaVersion := "2.10.4"
 
@@ -35,6 +36,7 @@ addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.1.0")
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.1")
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.0")
 
+// Scripted Testing
 scriptedSettings
 scriptedLaunchOpts := { scriptedLaunchOpts.value ++
   Seq("-Xmx1024M", "-XX:MaxPermSize=256M", "-Dplugin.version=" + version.value)
