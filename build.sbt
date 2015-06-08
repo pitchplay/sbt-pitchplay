@@ -36,4 +36,6 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.1")
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.0")
 
 scriptedSettings
-scriptedLaunchOpts += "-Dproject.version=" + version.value
+scriptedLaunchOpts := { scriptedLaunchOpts.value ++
+  Seq("-Xmx1024M", "-XX:MaxPermSize=256M", "-Dplugin.version=" + version.value)
+}

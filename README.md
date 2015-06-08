@@ -24,6 +24,12 @@ will need to be placed in the root of the project.
 
 See each individual plugin for additional overrides and settings if needed.
 
+Quirks
+------
+
+Currently [sbt-buildinfo] needs to be explicitly enabled in the projects
+build.sbt file.
+
 License
 -------
 

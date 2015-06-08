@@ -1,0 +1,7 @@
+$ exec git init
+$ exec git config user.email "test@example.org"
+$ exec git config user.name "test"
+$ exec git add -A
+$ exec git commit -m "IC"
+> compile
+$ exists target/scala-2.11/src_managed/main/sbt-buildinfo/BuildInfo.scala

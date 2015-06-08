@@ -12,6 +12,9 @@ import sbtbuildinfo.BuildInfoKeys._
 
 object BuildInformation extends AutoPlugin {
 
+  override def requires = BuildInfoPlugin
+  override def trigger = allRequirements
+
   private[this] lazy val buildKeys: Seq[BuildInfoKey] = Seq(
     name,
     version,
