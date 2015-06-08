@@ -1,0 +1,10 @@
+-> release with-defaults
+$ exec git init
+$ exec git config user.email "test@example.org"
+$ exec git config user.name "test"
+$ exec git add -A
+$ exec git commit -m "ic"
+$ exec git checkout -b foo
+-> release with-defaults
+$ exec git checkout master
+> release with-defaults

@@ -8,12 +8,13 @@ package io.pitchplay.sbt
 import sbt._
 import sbt.Keys._
 import sbtrelease.ReleasePlugin
-import sbtrelease.ReleasePlugin.autoImport._
+import sbtrelease.ReleasePlugin.autoImport.{releaseProcess, ReleaseStep}
 import sbtrelease.ReleaseStateTransformations._
 import com.typesafe.sbt.packager.Keys._
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 
-object ReleaseSettings extends AutoPlugin {
+
+object ReleaseSettings extends AutoPlugin with ReleaseTasks {
 
   override def requires = ReleasePlugin
   override def trigger = allRequirements
@@ -37,24 +38,5 @@ object ReleaseSettings extends AutoPlugin {
     commitNextVersion,
     pushChanges
   )
-
-  /** Publish to Docker registry */
-  private[this] lazy val dockerRelease: ReleaseStep = { st: State =>
-    val extracted = Project.extract(st)
-    val ref = extracted.get(thisProjectRef)
-    extracted.runAggregated(publish in Docker in ref, st)
-  }
-
-  /** Sanity check that the release is being run on the Master branch */
-  private[this] lazy val masterCheck: ReleaseStep = { st: State =>
-    val extracted = Project.extract(st)
-    val vcs = extracted.get(releaseVcs).getOrElse(
-      sys.error("Aborting release. Working directory is not a recognized VCS.")
-    )
-    if (vcs.currentBranch != "master")
-      sys.error("Aborting release. Not on master branch.")
-    st
-  }
-
 
 }
