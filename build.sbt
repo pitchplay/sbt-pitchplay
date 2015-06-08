@@ -7,7 +7,11 @@ sbtPlugin := true
 
 organization := "io.pitchplay"
 name := "sbt-pitchplay"
-licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"))
+
+homepage := Some(url("https://github.com/pitchplay/sbt-pitchplay"))
+licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
+bintrayOrganization := Some("pitchplay")
+publishMavenStyle := false
 
 scalaVersion := "2.10.4"
 
