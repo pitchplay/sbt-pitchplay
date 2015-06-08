@@ -28,19 +28,14 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard"
 )
 
-// Included Plugins
-// Build
+/* Included Plugins */
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.4.0")
-
-// Test
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.1.0")
-
-// Release
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.1")
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.0")
 
-// Scripted Testing
+/* Scripted */
 scriptedSettings
 scriptedLaunchOpts := { scriptedLaunchOpts.value ++
   Seq("-Xmx1024M", "-XX:MaxPermSize=256M", "-Dplugin.version=" + version.value)
