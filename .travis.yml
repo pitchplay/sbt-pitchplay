@@ -1,3 +1,5 @@
+sudo: false
+
 language: scala
 
 cache:
@@ -7,7 +9,7 @@ cache:
 
 scala:
   - 2.10.5
-  - 2.11.7
+#  - 2.11.7  # if only...
 
 jdk:
   - oraclejdk8
