@@ -13,7 +13,7 @@ licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.
 bintrayOrganization := Some("pitchplay")
 publishMavenStyle := false
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.10.5"
 
 scalacOptions ++= Seq(
   "-deprecation",
