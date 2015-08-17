@@ -1,0 +1,11 @@
+sbtpitchplay:
+  image: pitchplay/scala-dev:jdk8
+  command: "~scripted"
+  volumes:
+    - .:/usr/src/app
+  volumes_from:
+    - ivycache
+ivycache:
+  image: busybox
+  volumes:
+    - ~/.ivy2:/root/.ivy2

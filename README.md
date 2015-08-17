@@ -30,6 +30,12 @@ Quirks
 Currently [sbt-buildinfo] needs to be explicitly enabled in the projects
 build.sbt file.
 
+Development
+-----------
+
+This repository contains a [docker-compose] configuration which will launch
+the scripted tests in watch mode.
+
 License
 -------
 
@@ -42,3 +48,4 @@ LICENSE and NOTICE files for further information.
 [sbt-scoverage]: https://github.com/scoverage/sbt-scoverage
 [sbt-native-packager]: https://github.com/sbt/sbt-native-packager
 [sbt-buildinfo]: https://github.com/sbt/sbt-buildinfo
+[docker-compose]: https://docs.docker.com/compose
