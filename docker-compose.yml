@@ -5,6 +5,9 @@ sbtpitchplay:
     - .:/usr/src/app
   volumes_from:
     - ivycache
+  log_opt:
+    max-size: "100k"
+    max-file: "1"
 ivycache:
   image: busybox
   volumes:
