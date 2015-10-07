@@ -31,7 +31,7 @@ object BuildInformation extends AutoPlugin {
     }
   )
 
-  override def projectSettings = Seq(
+  override def projectSettings: Seq[Setting[_]] = Seq(
     buildInfoKeys := buildKeys
   )
 

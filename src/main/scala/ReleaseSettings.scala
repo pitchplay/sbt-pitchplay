@@ -15,12 +15,14 @@ import com.typesafe.sbt.packager.docker.DockerPlugin
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 
 
-object ReleaseSettings extends AutoPlugin with ReleaseTasks {
+object ReleaseSettings extends AutoPlugin {
 
   override def requires = ReleasePlugin && DockerPlugin
   override def trigger = allRequirements
 
-  override def projectSettings = Seq(
+  import ReleaseTasks._
+
+  override def projectSettings: Seq[Setting[_]] = Seq(
     releaseProcess := release,
     dockerRepository in Docker := Some("pitchplay"),
     dockerBaseImage in Docker := "java:8-jre"

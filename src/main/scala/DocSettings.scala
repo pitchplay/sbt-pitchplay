@@ -9,7 +9,7 @@ import sbt._
 import sbt.Keys._
 
 object DocSettings extends AutoPlugin {
-  override def projectSettings = Seq(
+  override def projectSettings: Seq[Setting[_]] = Seq(
     autoAPIMappings := true
   )
 }
