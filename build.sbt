@@ -3,6 +3,9 @@
  * See the LICENCE file distributed with this work for additional
  * information regarding copyright ownership.
  */
+
+lazy val `sbt-pitchplay` = project in file(".")
+
 sbtPlugin := true
 
 organization := "io.pitchplay"
