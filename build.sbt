@@ -13,7 +13,7 @@ licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.
 bintrayOrganization := Some("pitchplay")
 publishMavenStyle := false
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.10.6"
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -28,12 +28,12 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard"
 )
 
-/* Included Plugins */
-addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
-addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.4.0")
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.1.0")
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.1")
-addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.0")
+/* Included Auto Plugins */
+addSbtPlugin("org.scalastyle"    %% "scalastyle-sbt-plugin" % "0.7.0")
+addSbtPlugin("com.eed3si9n"      %  "sbt-buildinfo"         % "0.5.0")
+addSbtPlugin("org.scoverage"     %  "sbt-scoverage"         % "1.3.3")
+addSbtPlugin("com.typesafe.sbt"  %  "sbt-native-packager"   % "1.0.4")
+addSbtPlugin("com.github.gseitz" %  "sbt-release"           % "1.0.1")
 
 /* Scripted */
 scriptedSettings
