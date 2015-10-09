@@ -15,12 +15,14 @@ import com.typesafe.sbt.packager.docker.DockerPlugin
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 
 
-object ReleaseSettings extends AutoPlugin {
+object ReleaseSettings extends AutoPlugin with ReleaseTasks {
 
   override def requires = ReleasePlugin && DockerPlugin
   override def trigger = allRequirements
 
-  import ReleaseTasks._
+  object autoImport {
+    lazy val ReleaseTasks = io.pitchplay.sbt.ReleaseTasks
+  }
 
   override def projectSettings: Seq[Setting[_]] = Seq(
     releaseProcess := release,

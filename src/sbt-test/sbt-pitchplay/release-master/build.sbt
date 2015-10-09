@@ -1,5 +1,7 @@
 name := "release test"
 
+import ReleaseTasks._
+
 releaseProcess := Seq(
-  ReleaseTasks.masterCheck
+  masterCheck
 )
