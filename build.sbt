@@ -14,6 +14,7 @@ name := "sbt-pitchplay"
 homepage := Some(url("https://github.com/pitchplay/sbt-pitchplay"))
 licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 bintrayOrganization := Some("pitchplay")
+bintrayPackageLabels := Seq("sbt")
 publishMavenStyle := false
 
 scalaVersion := "2.10.6"
