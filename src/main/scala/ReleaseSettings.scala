@@ -13,11 +13,13 @@ import sbtrelease.ReleaseStateTransformations._
 import com.typesafe.sbt.packager.Keys._
 import com.typesafe.sbt.packager.docker.DockerPlugin
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
+import com.timushev.sbt.updates.UpdatesPlugin
+import com.timushev.sbt.updates.UpdatesKeys.dependencyUpdatesFailBuild
 
 
 object ReleaseSettings extends AutoPlugin with ReleaseTasks {
 
-  override def requires = ReleasePlugin && DockerPlugin
+  override def requires = ReleasePlugin && DockerPlugin && UpdatesPlugin
   override def trigger = allRequirements
 
   object autoImport {

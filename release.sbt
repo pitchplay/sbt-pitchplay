@@ -4,6 +4,7 @@ import ReleaseTransformations._
 releaseProcess := Seq(
   masterCheck,
   checkSnapshotDependencies,
+  dependencyCheck,
   inquireVersions,
   runClean,
   setReleaseVersion,
