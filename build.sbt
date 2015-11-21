@@ -13,12 +13,12 @@ name := "sbt-pitchplay"
 homepage := Some(url("https://github.com/pitchplay/sbt-pitchplay"))
 licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 bintrayPackageLabels := Seq("sbt")
+bintrayOrganization := Some("pitchplay")
 publishMavenStyle := false
 
 scalaVersion := "2.10.6"
 
 /* Included Auto Plugins */
-addSbtPlugin("me.lessis"         %  "bintray-sbt"           % "0.3.0")
 addSbtPlugin("org.scalastyle"    %% "scalastyle-sbt-plugin" % "0.7.0")
 addSbtPlugin("com.eed3si9n"      %  "sbt-buildinfo"         % "0.5.0")
 addSbtPlugin("org.scoverage"     %  "sbt-scoverage"         % "1.3.3")

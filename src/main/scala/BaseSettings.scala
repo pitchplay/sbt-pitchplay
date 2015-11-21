@@ -7,14 +7,12 @@ package io.pitchplay.sbt
 
 import sbt._
 import sbt.Keys._
-import bintray.BintrayKeys._
 
 object BaseSettings extends AutoPlugin {
   override def trigger = allRequirements
 
   override def projectSettings: Seq[Setting[_]] = Seq(
     organization := "io.pitchplay",
-    bintrayOrganization := Some("pitchplay"),
     scalaVersion := "2.11.6",
     // format: OFF
     scalacOptions ++= Seq(
