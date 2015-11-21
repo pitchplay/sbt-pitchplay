@@ -5,11 +5,11 @@
  */
 package io.pitchplay.sbt
 
-import sbt.{Project, State}
-import sbt.Keys.{publish, thisProjectRef}
-import sbtrelease.ReleasePlugin.autoImport.{ReleaseStep, releaseVcs}
+import sbt.{ Project, State }
+import sbt.Keys.{ publish, thisProjectRef }
+import sbtrelease.ReleasePlugin.autoImport.{ ReleaseStep, releaseVcs }
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
-import com.timushev.sbt.updates.UpdatesKeys.{dependencyUpdates,dependencyUpdatesFailBuild}
+import com.timushev.sbt.updates.UpdatesKeys.{ dependencyUpdates, dependencyUpdatesFailBuild }
 
 trait ReleaseTasks {
 
@@ -32,7 +32,7 @@ trait ReleaseTasks {
   }
 
   /** Ensure all dependencies are up to date for release  */
-  lazy val dependencyCheck: ReleaseStep = {st0: State =>
+  lazy val dependencyCheck: ReleaseStep = { st0: State =>
     val ext = Project.extract(st0)
     val st1 = ext.append(Seq(dependencyUpdatesFailBuild := true), st0)
     val extracted = Project.extract(st1)

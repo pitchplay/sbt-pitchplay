@@ -16,6 +16,7 @@ object BaseSettings extends AutoPlugin {
     organization := "io.pitchplay",
     bintrayOrganization := Some("pitchplay"),
     scalaVersion := "2.11.6",
+    // format: OFF
     scalacOptions ++= Seq(
       "-deprecation",         // Warn on deprecated API's
       "-feature",             // Explicit feature checking
@@ -29,6 +30,7 @@ object BaseSettings extends AutoPlugin {
       "-Ywarn-numeric-widen", // Warn when numerics are widened.
       "-Ywarn-value-discard"  // Warn when non-Unit expression results are unused
     ),
+    // format; ON
     updateOptions := updateOptions.value.withCachedResolution(true)
   )
 }

@@ -21,8 +21,8 @@ object LibraryVersions extends AutoPlugin {
 
   override def projectSettings: Seq[Setting[_]] = Seq(
     libraryVersions := Map(
-      'scalacheck   -> "1.12.5",
-      'scalatest    -> "2.2.5"
+      'scalacheck -> "1.12.5",
+      'scalatest -> "2.2.5"
     )
   )
 }

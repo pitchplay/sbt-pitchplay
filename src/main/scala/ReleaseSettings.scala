@@ -8,14 +8,13 @@ package io.pitchplay.sbt
 import sbt._
 import sbt.Keys._
 import sbtrelease.ReleasePlugin
-import sbtrelease.ReleasePlugin.autoImport.{releaseProcess, ReleaseStep}
+import sbtrelease.ReleasePlugin.autoImport.{ releaseProcess, ReleaseStep }
 import sbtrelease.ReleaseStateTransformations._
 import com.typesafe.sbt.packager.Keys._
 import com.typesafe.sbt.packager.docker.DockerPlugin
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 import com.timushev.sbt.updates.UpdatesPlugin
 import com.timushev.sbt.updates.UpdatesKeys.dependencyUpdatesFailBuild
-
 
 object ReleaseSettings extends AutoPlugin with ReleaseTasks {
 
