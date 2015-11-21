@@ -1,0 +1,27 @@
+/* Copyright © 2015 PitchPlay Inc.
+ *
+ * See the LICENCE file distributed with this work for additional
+ * information regarding copyright ownership.
+ */
+
+package io.pitchplay.sbt
+
+import sbt._
+import sbt.Keys._
+import com.typesafe.sbt.SbtScalariform._
+
+object CodeFormat extends AutoPlugin {
+  override def trigger = allRequirements
+
+  private[this] lazy val scalariformSettings = {
+    import scalariform.formatter.preferences._
+    Seq(
+      ScalariformKeys.preferences := ScalariformKeys.preferences.value
+        .setPreference(FormatXml, false)
+        .setPreference(DoubleIndentClassDeclaration, false)
+    )
+  }
+
+  override def projectSettings: Seq[Setting[_]] =
+    defaultScalariformSettings ++ scalariformSettings
+}
