@@ -18,6 +18,10 @@ object CodeFormat extends AutoPlugin {
     ScalariformKeys.preferences := ScalariformKeys.preferences.value
       .setPreference(FormatXml, false)
       .setPreference(DoubleIndentClassDeclaration, false)
+      .setPreference(AlignArguments, true)
+      .setPreference(AlignParameters, true)
+      .setPreference(AlignSingleLineCaseStatements, true)
+      .setPreference(DoubleIndentClassDeclaration, true)
   )
 
   override def projectSettings: Seq[Setting[_]] =
